@@ -1,0 +1,7 @@
+{
+  "name": "Gemini Lead Generation Toolkit",
+  "description": "A comprehensive lead generation and outreach platform powered by Gemini. Discover leads, manage contacts, analyze company data, craft personalized outreach, and get strategic insights, all in one place.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
