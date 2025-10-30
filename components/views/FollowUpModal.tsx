@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Lead, Template } from '../../types';
 import { Modal } from '../ui/Modal';
 import { Button } from '../ui/Button';
-import { personalizeEmailBody } from '../../services/geminiService';
+import { personalizeEmailBody } from '../../services/leadprotonService';
 import { Spinner } from '../ui/Spinner';
 
 interface FollowUpModalProps {

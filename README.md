@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🚀 LeadProton — AI-Powered Lead Generation & Management
 
-# Run and deploy your AI Studio app
+**Built by Toqeer**
 
-This contains everything you need to run your app locally.
+LeadProton is an intelligent lead generation and management toolkit that automates prospect discovery, enrichment, and outreach using advanced AI models.  
+Secure, extendable, and ready for production.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1iRIZB4099duwA-cjuz9aMeXEFxoweFmJ
+## 🧠 Features
+- 🧩 Lead discovery and enrichment
+- ✉️ Email pattern and outreach generation
+- 🪄 AI-driven lead scoring
+- 📊 Dashboard for team analytics
+- 🔐 Secure API (no exposed keys)
+- ⚙️ Modular design (frontend + backend ready)
 
-## Run Locally
+## 🧰 Tech Stack
+- React + Vite + TypeScript  
+- Node.js + Express (planned backend)  
+- PostgreSQL / Prisma (upcoming)  
+- LeadProton AI Core (Gemini-compatible layer)
 
-**Prerequisites:**  Node.js
+## ⚙️ Setup
+```bash
+npm install
+npm run dev
+```
 
+App runs at **http://localhost:5173**
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🧑‍💻 Author
+
+**Built by Toqeer**
+📧 contact@leadproton.ai
+
+## 📜 License
+
+MIT © 2025 Toqeer

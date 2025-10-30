@@ -1,7 +1,6 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { ChatMessage } from '../../types';
-import { GoogleGenAI, Chat } from "@google/genai";
 import { Spinner } from '../ui/Spinner';
 
 export const Chatbot: React.FC = () => {
@@ -11,7 +10,7 @@ export const Chatbot: React.FC = () => {
     ]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const chatRef = useRef<Chat | null>(null);
+    const chatRef = useRef<any | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -22,13 +21,15 @@ export const Chatbot: React.FC = () => {
     
     const initializeChat = useCallback(() => {
         try {
-            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
-            chatRef.current = ai.chats.create({
-                model: 'gemini-2.5-flash',
-                config: {
-                    systemInstruction: 'You are a helpful AI assistant for a lead generation application. Your role is to provide advice on sales, marketing, lead generation strategies, and how to use the app effectively. Be concise and encouraging.',
-                },
-            });
+            chatRef.current = {
+                async sendMessage({ message }: { message: string }) {
+                    const configured = !!process.env.LEADPROTON_API_KEY;
+                    const text = configured
+                      ? `LeadProton AI received: "${message}" (demo mode)`
+                      : 'LeadProton AI is not configured yet. Set LEADPROTON_API_KEY in your .env.local.';
+                    return { text };
+                }
+            };
         } catch (error) {
             console.error("Failed to initialize chat:", error);
             setMessages(prev => [...prev, { role: 'model', text: "Sorry, I'm having trouble connecting right now." }]);
@@ -78,7 +79,7 @@ export const Chatbot: React.FC = () => {
             {isOpen && (
                 <div className="fixed bottom-20 right-6 w-80 h-96 bg-gray-800 rounded-lg shadow-2xl flex flex-col text-sm animate-fade-in-up">
                     <header className="bg-gray-900 p-3 rounded-t-lg">
-                        <h3 className="font-semibold text-white">AI Assistant</h3>
+                        <h3 className="font-semibold text-white">LeadProton AI</h3>
                     </header>
                     <div className="flex-1 p-3 overflow-y-auto">
                         {messages.map((msg, index) => (

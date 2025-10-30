@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Spinner } from '../ui/Spinner';
 import { Lead, LeadStatus, GroundingChunk } from '../../types';
-import { generateEmailPatterns, fetchCompanyInfo } from '../../services/geminiService';
+import { generateEmailPatterns, fetchCompanyInfo } from '../../services/leadprotonService';
 
 interface Props {
   setLeads: React.Dispatch<React.SetStateAction<Lead[]>>;
@@ -94,7 +94,7 @@ export const DiscoveryView: React.FC<Props> = ({ setLeads }) => {
         {isLoading && (
           <div className="flex justify-center items-center h-40">
             <Spinner />
-            <p className="ml-4">Discovering intel with Gemini...</p>
+            <p className="ml-4">Discovering intel with LeadProton AI...</p>
           </div>
         )}
         

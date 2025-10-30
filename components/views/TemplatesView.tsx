@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Template } from '../../types';
 import { Button } from '../ui/Button';
 import { Modal } from '../ui/Modal';
-import { generateSubjectLines, generateEmailBody } from '../../services/geminiService';
+import { generateSubjectLines, generateEmailBody } from '../../services/leadprotonService';
 import { Spinner } from '../ui/Spinner';
 
 const TemplateForm: React.FC<{

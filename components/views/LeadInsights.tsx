@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Lead } from '../../types';
-import { getStrategicAnalysis } from '../../services/geminiService';
+import { getStrategicAnalysis } from '../../services/leadprotonService';
 import { Spinner } from '../ui/Spinner';
 
 interface LeadInsightsProps {
@@ -48,7 +48,7 @@ export const LeadInsights: React.FC<LeadInsightsProps> = ({ lead, onClose }) => 
             {isLoading && (
                 <div className="flex flex-col justify-center items-center h-48">
                     <Spinner />
-                    <p className="ml-4 mt-4 text-gray-400">Generating strategic plan with Gemini...</p>
+                    <p className="ml-4 mt-4 text-gray-400">Generating strategic plan with LeadProton AI...</p>
                 </div>
             )}
             

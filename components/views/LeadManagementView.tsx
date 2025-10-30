@@ -4,7 +4,7 @@ import { Button } from '../ui/Button';
 import { Modal } from '../ui/Modal';
 import { Spinner } from '../ui/Spinner';
 import { exportLeadsToCSV, importLeadsFromCSV } from '../../utils/csvHelper';
-import { findCompanyLocation } from '../../services/geminiService';
+import { findCompanyLocation } from '../../services/leadprotonService';
 import { getActivitiesForLead, addActivity, deleteActivitiesForLead, formatTimeAgo } from '../../utils/activityHelper';
 import { FollowUpModal } from './FollowUpModal';
 import { LeadInsights } from './LeadInsights';

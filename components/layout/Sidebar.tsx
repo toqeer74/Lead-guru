@@ -39,7 +39,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) =
         <div className="bg-blue-600 p-2 rounded-lg">
           <TargetIcon />
         </div>
-        <h1 className="text-xl font-bold ml-3 text-white">LeadGen AI</h1>
+        <h1 className="text-xl font-bold ml-3 text-white">LeadProton</h1>
       </div>
       <nav>
         <ul>
@@ -55,7 +55,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) =
         </ul>
       </nav>
       <div className="mt-auto text-center text-gray-500 text-xs">
-        <p>Powered by Gemini</p>
+        <p>Built by Toqeer</p>
       </div>
     </div>
   );

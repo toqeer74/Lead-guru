@@ -1,6 +1,6 @@
 {
-  "name": "Gemini Lead Generation Toolkit",
-  "description": "A comprehensive lead generation and outreach platform powered by Gemini. Discover leads, manage contacts, analyze company data, craft personalized outreach, and get strategic insights, all in one place.",
+  "name": "LeadProton — Built by Toqeer",
+  "description": "LeadProton — AI-powered lead generation and CRM built by Toqeer.",
   "requestFramePermissions": [
     "geolocation"
   ]

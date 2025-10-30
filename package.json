@@ -1,5 +1,5 @@
 {
-  "name": "gemini-lead-generation-toolkit",
+  "name": "leadproton",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,10 +8,11 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "description": "LeadProton — AI-powered lead generation and CRM built by Toqeer.",
+  "author": "Toqeer",
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@google/genai": "^1.28.0",
     "recharts": "^3.3.0"
   },
   "devDependencies": {
